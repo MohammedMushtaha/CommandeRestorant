@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/main_meny"
+    android:layout_margin="5dp"
+    android:layout_marginTop="18dp"
+    android:background="@drawable/shape_menu_item"
+    android:layoutDirection="locale"
+    android:orientation="horizontal"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+
+        android:id="@+id/main9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.7"
+                android:orientation="vertical">
+
+
+                <com.example.commanderestorant.customfonts.MyTextView
+                    android:id="@+id/txtId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#1000366"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+
+                <com.example.commanderestorant.customfonts.MyTextView
+                    android:id="@+id/txtItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="10dp"
+                    android:text="2 items($30.60)"
+                    android:textColor="@color/black"
+                    android:textDirection="locale"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+
+                <com.example.commanderestorant.customfonts.MyTextView
+                    android:id="@+id/txtRider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:drawablePadding="10dp"
+                    android:text="No rider assigned yet"
+                    android:textColor="@color/black"
+                    android:textDirection="locale"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <com.example.commanderestorant.customfonts.MyTextView
+                    android:id="@+id/txtTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="2 min" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/ic_go" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

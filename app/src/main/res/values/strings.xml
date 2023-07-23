@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CommandeRestorant</string>
+    <string name="login_to_your_account">Login to your account</string>
+    <string name="letsget">Lets get started</string>
+</resources>

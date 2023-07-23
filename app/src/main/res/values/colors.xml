@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">#059372</color>
+    <color name="purple_500">#059372</color>
+    <color name="purple_700">#059372</color>
+    <color name="primaryTxtColor">#059372</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="background">#FCFCFC</color>
+    <color name="loginSelver">#4F5A65</color>
+    <color name="stroke">#ECECEE</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ColorSelver4">#F3F2F2</color>
+    <color name="strokColorSelver3">#DAE1EA</color>
+    <color name="textColorSelver2">#F5FAEE</color>
+
+</resources>
