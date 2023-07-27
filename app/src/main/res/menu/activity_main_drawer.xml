@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/menu_item_id"
+        android:title="Menu Item"
+        android:icon="@drawable/ic_menu" />
+    <!-- Use the new drawable resource for the custom icon -->
+    <!-- More menu items if you have -->
+</menu>

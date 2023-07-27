@@ -8,10 +8,15 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="yallow">#FDEBBE</color>
+    <color name="yallowDark">#FFC107</color>
+    <color name="strokeColor">#ECECEE</color>
     <color name="background">#FCFCFC</color>
+    <color name="hintColor">#999FAC</color>
     <color name="loginSelver">#4F5A65</color>
     <color name="stroke">#ECECEE</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="color_txt">#252C3E</color>
     <color name="ColorSelver4">#F3F2F2</color>
     <color name="strokColorSelver3">#DAE1EA</color>
     <color name="textColorSelver2">#F5FAEE</color>

@@ -23,4 +23,11 @@
         <item name="fontFamily">fonts/Cairo-Regular.otf</item>
 
     </style>
+    <style name="Theme.CommandeRestorant.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.CommandeRestorant.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.CommandeRestorant.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

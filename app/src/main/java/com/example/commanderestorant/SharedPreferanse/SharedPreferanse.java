@@ -22,6 +22,8 @@ public class SharedPreferanse {
     public static String TOKENProvider = "TOKENProvider";
 //////User Data
     public static String ID = "ID";
+    public static String position = "position";
+
     public static String FirstName = "FirstName";
     public static String LastName = "LastName";
     public static String Email = "Email";

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +14,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CommandeRestorant"
         tools:targetApi="31">
+        <activity
+            android:name=".auth.forgetPassword.ForgetPasswordActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".auth.Login.RegisterActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".auth.Login.LoginActivity"
             android:exported="false">
@@ -25,7 +41,7 @@
             android:theme="@style/Theme.CommandeRestorant.NoActionBar_Splash">
             <meta-data
                 android:name="android.app.lib_name"
-                android:value=""></meta-data>
+                android:value="" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,6 +51,21 @@
         </activity>
         <activity
             android:name=".MainNavActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MainNavigationActivity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".auth.OTPCode.OTPCodeActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
