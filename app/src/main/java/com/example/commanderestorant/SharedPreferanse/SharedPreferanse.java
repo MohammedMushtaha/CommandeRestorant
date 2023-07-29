@@ -26,6 +26,7 @@ public class SharedPreferanse {
 
     public static String FirstName = "FirstName";
     public static String LastName = "LastName";
+    public static String isShowToolBar = "isShowToolBar";
     public static String Email = "Email";
     public static String EmailVerifiedAt = "EmailVerifiedAt";
     public static String PhoneVerifiedAt = "PhoneVerifiedAt";

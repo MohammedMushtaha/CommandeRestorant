@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
 
         activityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
 
+
         onClick();
 
     }

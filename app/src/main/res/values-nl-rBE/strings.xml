@@ -30,6 +30,8 @@
     <string name="enter_the_sent">Enter the sent code to your email</string>
     <string name="Check">Check</string>
     <string name="recieveCode">Didn t Recieve any code</string>
+    <string name="point">point</string>
+    <string name="my_Profile">My Profile</string>
 
 
     <array name="menuOptions">

@@ -1,26 +1,28 @@
 package com.example.commanderestorant;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.util.AttributeSet;
 import android.view.View;
 import android.view.Menu;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.commanderestorant.ui.gallery.GalleryFragment;
+import com.example.commanderestorant.SharedPreferanse.SharedPreferanse;
+import com.example.commanderestorant.auth.Login.LoginActivity;
+import com.example.commanderestorant.ui.profile.ProfileFragment;
 import com.example.commanderestorant.ui.home.HomeFragment;
 import com.example.commanderestorant.ui.slideshow.SlideshowFragment;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.commanderestorant.databinding.ActivityMainNavigationBinding;
@@ -35,21 +37,29 @@ import nl.psdcompany.duonavigationdrawer.widgets.DuoDrawerToggle;
 public class MainNavigationActivity extends AppCompatActivity implements DuoMenuView.OnMenuClickListener {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private ActivityMainNavigationBinding binding;
+    ActivityMainNavigationBinding binding;
 
     private MenuAdapter mMenuAdapter;
     private ViewHolder mViewHolder;
 
     private ArrayList<String> mTitles = new ArrayList<>();
 
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull String name, @NonNull Context context, @NonNull AttributeSet attrs) {
+        Toast.makeText(this, "E", Toast.LENGTH_SHORT).show();
+
+        return super.onCreateView(name, context, attrs);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Toast.makeText(this, "E", Toast.LENGTH_SHORT).show();
 
-        setContentView(R.layout.activity_main_navigation);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main_navigation);
 
         mTitles = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.menuOptions)));
-
 
         ImageView button = findViewById(R.id.btn_menu);
 
@@ -75,11 +85,12 @@ public class MainNavigationActivity extends AppCompatActivity implements DuoMenu
         goToFragment(new HomeFragment(), false);
 
 
-        mMenuAdapter.setViewSelected(0, true);
+        // mMenuAdapter.setViewSelected(0, true);
         setTitle(mTitles.get(0));
         // mMenuAdapter.getItem()
 
     }
+
 
     private void handleToolbar() {
         setSupportActionBar(mViewHolder.mToolbar);
@@ -151,9 +162,15 @@ public class MainNavigationActivity extends AppCompatActivity implements DuoMenu
 
         // Navigate to the right fragment
         switch (position) {
+            case 0:
+
+
+                break;
+
             case 1:
-                Toast.makeText(this, "df", Toast.LENGTH_SHORT).show();
-                goToFragment(new HomeFragment(), false);
+                //toolBarVisibility(0);
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new ProfileFragment()).addToBackStack(null).commit();
+
                 break;
 
             case 2:
@@ -166,19 +183,19 @@ public class MainNavigationActivity extends AppCompatActivity implements DuoMenu
             case 3:
 
                 Toast.makeText(this, "B" + position, Toast.LENGTH_SHORT).show();
-                goToFragment(new GalleryFragment(), false);
+                goToFragment(new ProfileFragment(), false);
                 break;
 
             case 4:
 
                 Toast.makeText(this, "C" + position, Toast.LENGTH_SHORT).show();
-                goToFragment(new GalleryFragment(), false);
+                goToFragment(new ProfileFragment(), false);
                 break;
 
             default:
 
                 Toast.makeText(this, "D" + position, Toast.LENGTH_SHORT).show();
-                goToFragment(new GalleryFragment(), false);
+                goToFragment(new ProfileFragment(), false);
                 break;
         }
 
@@ -196,5 +213,47 @@ public class MainNavigationActivity extends AppCompatActivity implements DuoMenu
             mDuoMenuView = (DuoMenuView) mDuoDrawerLayout.getMenuView();
             mToolbar = (Toolbar) findViewById(R.id.toolbar);
         }
+    }
+
+    public void toolBarVisibility(int isVisibility) {
+        if (isVisibility == 1) {
+            binding.toolbarCustom.setVisibility(View.VISIBLE);
+
+        } else {
+            binding.toolbarCustom.setVisibility(View.GONE);
+
+        }
+
+    }
+
+    @Override
+    protected void onResume() {
+        Toast.makeText(this, "C", Toast.LENGTH_SHORT).show();
+
+        super.onResume();
+    }
+
+    @Override
+    protected void onRestart() {
+        Toast.makeText(this, "B", Toast.LENGTH_SHORT).show();
+
+        super.onRestart();
+    }
+
+    @Override
+    protected void onStart() {
+        Toast.makeText(this, "A", Toast.LENGTH_SHORT).show();
+        super.onStart();
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
+        Toast.makeText(this, "D", Toast.LENGTH_SHORT).show();
+        super.onCreate(savedInstanceState, persistentState);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

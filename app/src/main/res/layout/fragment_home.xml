@@ -5,33 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="80dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp"
 
     tools:context=".ui.home.HomeFragment">
 
-    <com.example.commanderestorant.customfonts.MyEditText
-        android:id="@+id/search"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/shape_search"
-        android:drawableLeft="@drawable/search"
-        android:drawablePadding="15dp"
-        android:hint="Search"
-        android:imeOptions="actionSearch"
-        android:paddingLeft="15sp"
-        android:paddingRight="15dp"
-        android:singleLine="true"
-        android:textColorHint="@color/hintColor"
-        android:textSize="13sp" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <com.example.commanderestorant.customfonts.MyEditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_search"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="15dp"
+                android:hint="Search"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="15sp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textColorHint="@color/hintColor"
+                android:textSize="13sp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerCategory"
@@ -53,7 +59,7 @@
                     android:drawablePadding="10dp"
                     android:gravity="center"
                     android:text="Featured Restaurets"
-                    android:textColor="@color/color_txt"
+                    android:textColor="@color/color_txt_dark"
                     android:textSize="15sp" />
 
                 <com.example.commanderestorant.customfonts.MyTextView
@@ -87,7 +93,7 @@
                     android:drawablePadding="10dp"
                     android:gravity="center"
                     android:text="Best offers near you"
-                    android:textColor="@color/color_txt"
+                    android:textColor="@color/color_txt_dark"
                     android:textSize="15sp" />
 
                 <com.example.commanderestorant.customfonts.MyTextView

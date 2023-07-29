@@ -28,6 +28,8 @@
     <string name="Check">Check</string>
     <string name="letsget">Lets get started</string>
     <string name="Reset_your_forgot_tenpassword">Reset your forgotten password</string>
+    <string name="point">point</string>
+    <string name="my_Profile">My Profile</string>
 
     <array name="menuOptions">
         <item>Home</item>
@@ -38,5 +40,8 @@
         <item>About2</item>
 
     </array>
+    <string name="title_activity_favorate_tap">FavorateTap</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 
 </resources>
